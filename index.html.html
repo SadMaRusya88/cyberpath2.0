@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07110f">
+<title>CyberPath — 6 месяцев</title>
+<style>
+:root{color-scheme:dark;--bg:#07110f;--panel:#0d1b17;--panel2:#10231d;--line:#203b30;--text:#e8f4ed;--muted:#91ab9b;--green:#72f0a1;--green2:#b7ffcb;--amber:#e9c46a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#10291e 0,#07110f 48%);color:var(--text);font:16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom));}
+main{max-width:760px;margin:0 auto}.top{padding:22px 4px 16px}.eyebrow{font-size:11px;letter-spacing:2.5px;color:var(--green);font-weight:800}.title{font-size:32px;line-height:1.05;font-weight:850;margin:9px 0}.title span{color:var(--green)}.sub{color:var(--muted);font-size:14px;line-height:1.5;max-width:500px}
+.panel{background:linear-gradient(145deg,rgba(16,35,29,.98),rgba(10,24,19,.98));border:1px solid var(--line);border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 12px 32px #0002}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#071510;border:1px solid #1c382a;border-radius:13px;padding:12px 8px}.num{font-size:24px;font-weight:800;color:var(--green)}.small{font-size:11px;color:var(--muted);margin-top:4px}.bar{height:8px;background:#1a3025;border-radius:10px;overflow:hidden;margin:12px 0 5px}.fill{height:100%;width:0;background:linear-gradient(90deg,#36c978,#a8ffc2);border-radius:10px;transition:width .2s}.section-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:22px 2px 10px}.section-head h2{font-size:18px;margin:0}.muted{color:var(--muted);font-size:12px}.monthgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.month{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px;text-align:left;color:var(--text);min-height:100px}.month.active{border-color:var(--green);box-shadow:inset 0 0 0 1px #72f0a133}.month .mnum{font-size:11px;color:var(--green);font-weight:800;letter-spacing:1px}.month strong{display:block;font-size:14px;margin:7px 0 5px}.month .mini{font-size:11px;color:var(--muted)}.week{border:1px solid var(--line);border-radius:16px;margin:10px 0;overflow:hidden;background:var(--panel)}.week summary{padding:15px;list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px}.week summary::-webkit-details-marker{display:none}.wn{width:38px;height:38px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;background:#153326;color:var(--green);font-weight:850}.wtitle{font-weight:750;font-size:14px}.wmeta{font-size:11px;color:var(--muted);margin-top:4px}.chev{margin-left:auto;color:var(--muted)}.tasks{padding:0 14px 14px}.task{display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-top:1px solid #1a3026;line-height:1.4;font-size:14px}.task input{appearance:none;width:22px;height:22px;flex-shrink:0;border:1.5px solid #547261;border-radius:7px;margin:0;background:#08140f}.task input:checked{background:var(--green);border-color:var(--green)}.task input:checked:after{content:"✓";display:block;text-align:center;color:#062112;font-weight:900;font-size:15px}.task label{flex:1}.task.done label{text-decoration:line-through;color:#759282}.daylabel{display:block;color:var(--green);font-size:10px;letter-spacing:1px;font-weight:800;margin-bottom:3px}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:11px;padding:10px 13px;background:#10231d;color:var(--text);font-weight:650;font-size:12px}.btn.primary{background:var(--green);color:#062112;border-color:var(--green)}.note{font-size:12px;color:var(--muted);line-height:1.5}.foot{padding:16px 4px;text-align:center;color:var(--muted);font-size:11px;line-height:1.6}.hidden{display:none!important}
+@media(min-width:600px){.monthgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.title{font-size:42px}}
+</style>
+</head>
+<body><main>
+<header class="top">
+<div class="eyebrow">PERSONAL LEARNING SYSTEM / 2026</div>
+<div class="title">CYBER<span>PATH</span></div>
+<div class="sub">Твой маршрут на 24 недели. Учись с iPhone, отмечай выполненное и собирай фундамент для Pentest / Red Team.</div>
+</header>
+<section class="panel">
+<div class="stats">
+<div class="stat"><div class="num" id="percent">0%</div><div class="small">ОБЩИЙ ПРОГРЕСС</div></div>
+<div class="stat"><div class="num" id="count">0/120</div><div class="small">ЗАДАНИЙ ГОТОВО</div></div>
+<div class="stat"><div class="num" id="streak">0</div><div class="small">НЕДЕЛЬ С ПРОГРЕССОМ</div></div>
+</div>
+<div class="bar"><div class="fill" id="overallFill"></div></div>
+<div class="note">Все отметки сохраняются в этом браузере на этом устройстве. Не очищай данные сайта, если хочешь сохранить прогресс.</div>
+</section>
+<div class="section-head"><h2>Твой маршрут</h2><span class="muted">6 месяцев · 24 недели</span></div>
+<div class="monthgrid" id="months"></div>
+<div class="section-head"><h2 id="weeksTitle">План по неделям</h2><span class="muted" id="monthProgress"></span></div>
+<div id="weeks"></div>
+<section class="panel">
+<h3 style="margin:0 0 8px">Правило прогресса</h3>
+<p class="note">1) Сначала пойми тему. 2) Сделай практику. 3) Запиши вывод своими словами. 4) Если тяжело — повтори неделю, это нормально.</p>
+<div class="btnrow"><button class="btn" id="export">Экспорт прогресса</button><button class="btn" id="importBtn">Импорт прогресса</button><button class="btn" id="reset">Сбросить отметки</button><input class="hidden" id="fileInput" type="file" accept="application/json"></div>
+<p class="note" style="margin-bottom:0">Важно: первые полгода можно учиться без ноутбука, но часть CTF и технических лабораторий удобнее отложить до появления компьютера. Работай только в разрешённых учебных средах.</p>
+</section>
+<div class="foot">CYBERPATH · BUILD SKILLS, NOT JUST STREAKS<br>Сохраняй знания, а не только галочки.</div>
+</main>
+<script>
+const DATA = {"months": [["Фундамент IT и Linux", "Компьютер, ОС, терминал, файлы, права доступа"], ["Компьютерные сети", "IP, DNS, TCP/UDP, порты, HTTP/HTTPS"], ["Python с нуля", "Переменные, условия, циклы, функции и мини-проект"], ["Веб и безопасность", "HTML, API, сессии и основные классы уязвимостей"], ["Blue Team и защита", "Криптография, логи, мониторинг и права доступа"], ["Проекты и CTF", "Закрепление навыков, отчёты и подготовка к ноутбуку"]], "weeks": [{"n": 1, "title": "Компьютер и IT", "days": ["Как устроен компьютер: CPU, RAM, накопитель, ОС", "Разница между Windows, Linux и дистрибутивами", "Клиент, сервер и путь открытия сайта", "Нарисовать схему телефона → сеть → сервер", "Повторить 20 терминов и сделать мини-тест"]}, {"n": 2, "title": "Linux: файлы и команды", "days": ["Терминал, shell и пути", "pwd, ls, cd", "mkdir, touch, cat", "cp, mv и безопасная работа с файлами", "Пройти упражнения Linux Journey и записать 10 команд"]}, {"n": 3, "title": "Linux: доступ и процессы", "days": ["Пользователи и группы", "Права r/w/x и chmod на примерах", "Процессы, PID и службы", "Почему не стоит работать постоянно от root", "Разобрать 10 примеров прав доступа"]}, {"n": 4, "title": "Закрепление основ", "days": ["Повторить файловую систему", "Повторить команды Linux", "Повторить права доступа", "Пройти доступные вводные задания", "Контрольная: объяснить основы без подсказок"]}, {"n": 5, "title": "Сети: основы", "days": ["LAN, WAN и интернет", "IPv4 и IPv6: базовая идея", "Частный и публичный IP", "MAC-адрес, маска и шлюз", "Нарисовать домашнюю сеть и проверить знания"]}, {"n": 6, "title": "Сетевые протоколы", "days": ["TCP и UDP", "Порты и сетевые службы", "DNS и DHCP", "NAT и модели TCP/IP/OSI", "Сделать карточки по протоколам и портам"]}, {"n": 7, "title": "Как работает веб", "days": ["Что происходит при вводе URL", "DNS-запрос и IP-адрес", "HTTP и HTTPS", "GET, POST и коды ответа", "Разобрать пример запроса и ответа"]}, {"n": 8, "title": "Повторение сетей", "days": ["Повторить IP и подсети на простых примерах", "Повторить DNS и DHCP", "Повторить TCP/UDP и порты", "Повторить HTTP/HTTPS", "Контрольная: объяснить путь запроса к сайту"]}, {"n": 9, "title": "Python: начало", "days": ["Запустить первую программу print()", "Переменные и типы данных", "input() и преобразование типов", "Строки, числа и операторы", "Написать мини-программу приветствия и калькулятор"]}, {"n": 10, "title": "Python: условия", "days": ["Сравнения и логические операторы", "if и else", "elif и несколько условий", "Практика: проверка правил пароля в учебной программе", "Решить 5 задач без копирования готового кода"]}, {"n": 11, "title": "Python: циклы и коллекции", "days": ["Цикл for", "Цикл while", "Списки", "Словари и подсчёт значений", "Написать программу подсчёта событий в списке"]}, {"n": 12, "title": "Python: функции и проект", "days": ["Функции и return", "Аргументы функций", "Методы строк", "Обработка простых ошибок и текстовых файлов", "Начать анализатор учебного журнала событий"]}, {"n": 13, "title": "Веб: устройство сайта", "days": ["HTML-структура", "CSS и оформление", "JavaScript: назначение", "API и JSON", "Собрать простую статическую HTML-страницу"]}, {"n": 14, "title": "Веб: вход и сессии", "days": ["HTTP-запрос и ответ подробнее", "Cookies", "Сессии и токены", "Аутентификация и авторизация", "Нарисовать схему безопасного входа"]}, {"n": 15, "title": "Веб-уязвимости: понятия", "days": ["SQL Injection: причина и защита", "XSS: причина и защита", "Broken Access Control", "Безопасная обработка файлов", "Составить таблицу «уязвимость → причина → защита»"]}, {"n": 16, "title": "OWASP и закрепление", "days": ["Изучить OWASP Top 10 обзор", "Параметризованные SQL-запросы", "Контекстное экранирование", "Проверка прав на сервере", "Контрольная по веб-безопасности"]}, {"n": 17, "title": "Основы защиты", "days": ["Конфиденциальность, целостность, доступность", "Угроза, уязвимость и риск", "Модель нарушителя", "Минимальные привилегии", "Описать риски вымышленного банковского сервиса"]}, {"n": 18, "title": "Криптография", "days": ["Хеширование и шифрование", "Симметричное шифрование", "Асимметричное шифрование и подписи", "MFA и безопасное хранение паролей", "Нарисовать схему безопасного хранения паролей"]}, {"n": 19, "title": "Логи и мониторинг", "days": ["Что такое системные логи", "Время, пользователь, источник и результат", "Успешные и неуспешные входы", "SIEM: базовая идея", "Разобрать 20–30 вымышленных событий"]}, {"n": 20, "title": "Windows и организации", "days": ["Локальные пользователи и группы", "Windows Event Logs", "Домен и контроллер домена", "Active Directory: назначение", "Объяснить принцип минимальных привилегий"]}, {"n": 21, "title": "Повторение Linux и сетей", "days": ["Повторить основные команды Linux", "Повторить права и процессы", "Повторить IP/DNS/TCP", "Повторить HTTP и порты", "Ответить на 40 контрольных вопросов"]}, {"n": 22, "title": "Python-проект", "days": ["Подсчёт типов событий", "Поиск записей по слову", "Обработка пустых данных", "Понятный вывод результатов", "Доработать проект и написать инструкцию"]}, {"n": 23, "title": "Первые CTF", "days": ["IT-термины и основы", "Простые задания Linux", "Текст и кодировки", "Основы веб-логики", "Пройти доступные задания в разрешённой учебной среде"]}, {"n": 24, "title": "Итоговая неделя", "days": ["Проверить Linux", "Проверить сети", "Написать Python-скрипт без подсказок", "Объяснить SQLi, XSS и способы защиты", "Подвести итоги и составить план следующих 3 месяцев"]}]};
+const KEY='cyberpath-tracker-v1';
+let state={done:{},activeMonth:0};
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'{}');state={...state,...saved};}catch(e){}
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem(KEY,JSON.stringify(state));renderStats();}
+function allTasks(){return DATA.weeks.flatMap(w=>w.days.map((d,i)=>`${w.n}-${i}`))}
+function monthOfWeek(n){return Math.floor((n-1)/4)}
+function renderMonths(){
+ $('months').innerHTML=DATA.months.map((m,i)=>{
+  const tasks=DATA.weeks.filter(w=>monthOfWeek(w.n)===i).flatMap(w=>w.days.map((d,j)=>`${w.n}-${j}`));
+  const done=tasks.filter(k=>state.done[k]).length;
+  return `<button class="month ${state.activeMonth===i?'active':''}" data-month="${i}"><div class="mnum">MONTH 0${i+1}</div><strong>${m[0]}</strong><div class="mini">${done}/${tasks.length} заданий · ${Math.round(done/tasks.length*100)}%</div></button>`;
+ }).join('');
+ document.querySelectorAll('[data-month]').forEach(b=>b.onclick=()=>{state.activeMonth=+b.dataset.month;renderMonths();renderWeeks();});
+}
+function renderWeeks(){
+ const m=state.activeMonth;
+ $('weeksTitle').textContent=`Месяц ${m+1} · ${DATA.months[m][0]}`;
+ const list=DATA.weeks.filter(w=>monthOfWeek(w.n)===m);
+ let total=0,done=0;
+ $('weeks').innerHTML=list.map(w=>{
+  const nDone=w.days.filter((d,i)=>state.done[`${w.n}-${i}`]).length;
+  total+=w.days.length;done+=nDone;
+  return `<details class="week" ${w.n===m*4+1?'open':''}><summary><div class="wn">${String(w.n).padStart(2,'0')}</div><div><div class="wtitle">Неделя ${w.n} — ${w.title}</div><div class="wmeta">${nDone}/${w.days.length} заданий выполнено</div></div><div class="chev">⌄</div></summary><div class="tasks">${w.days.map((task,i)=>{const key=`${w.n}-${i}`,checked=!!state.done[key];return `<div class="task ${checked?'done':''}"><input type="checkbox" id="t${key}" data-key="${key}" ${checked?'checked':''}><label for="t${key}"><span class="daylabel">${['ДЕНЬ 1','ДЕНЬ 2','ДЕНЬ 3','ДЕНЬ 4','ДЕНЬ 5'][i]}</span>${task}</label></div>`}).join('')}</div></details>`;
+ }).join('');
+ $('monthProgress').textContent=`${done}/${total} выполнено`;
+ document.querySelectorAll('[data-key]').forEach(c=>c.onchange=()=>{state.done[c.dataset.key]=c.checked;if(!c.checked)delete state.done[c.dataset.key];c.closest('.task').classList.toggle('done',c.checked);save();renderMonths();renderWeeks();});
+}
+function renderStats(){
+ const keys=allTasks(),done=keys.filter(k=>state.done[k]).length,p=Math.round(done/keys.length*100);
+ $('percent').textContent=p+'%';$('count').textContent=`${done}/${keys.length}`;$('overallFill').style.width=p+'%';
+ $('streak').textContent=DATA.weeks.filter(w=>w.days.some((d,i)=>state.done[`${w.n}-${i}`])).length;
+}
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cyberpath-progress.json';a.click();URL.revokeObjectURL(a.href);};
+$('importBtn').onclick=()=>$('fileInput').click();
+$('fileInput').onchange=async e=>{try{const x=JSON.parse(await e.target.files[0].text());if(x&&x.done){state={...state,...x};save();renderMonths();renderWeeks();alert('Прогресс импортирован.');}}catch(err){alert('Не удалось прочитать файл прогресса.');}};
+$('reset').onclick=()=>{if(confirm('Удалить все отметки прогресса? Сначала экспортируй резервную копию, если она нужна.')){state.done={};save();renderMonths();renderWeeks();}};
+renderMonths();renderWeeks();renderStats();
+</script></body></html>
